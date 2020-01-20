@@ -8,6 +8,9 @@ Simple UNIX like operating system with kernel mode and usermode implementation b
 - Assembly Language (nasm)
 - Binary Type
     - Elf32
+- Testing and Debugging
+    - PC Emulator to run the OS (QEMU)
+    - Debug console (remote serial on qemu)
 
 ### Kernel
 The Kernel should contail the ability to load driver modules and be loadable via the bootsector. there should be simple memory management functions along with a basic text mode driver. A kernel mode shell will also be useful for debugging and initialization toward stage 2 and 3 loading to move in to usermode.
