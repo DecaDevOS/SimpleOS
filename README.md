@@ -35,4 +35,10 @@ The Kernel should contail the ability to load driver modules and be loadable via
 - Read In port (inport): return the data from a port
 - Write Out port (outport): write data to a port
 
+*GFX Driver - Grapic Init / Text operations*
+- Initialize Graphics (init_gfx): set the graphic memory in to an initialized state
+- Set the Colour of the text (settextcolour): change the second half of the grphics memory data to the colour of choice
+- Clear the screen (cls): manipulate the graphic memory to clear the buffers and move data out of scope
+- Put Character to Screen (putch): add a single char data to the graphics memory and display on screen
+- Put a string of chars to screen (puts): loop over putch calls using an array of chars as data
 
