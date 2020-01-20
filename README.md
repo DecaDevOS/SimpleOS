@@ -42,3 +42,10 @@ The Kernel should contail the ability to load driver modules and be loadable via
 - Put Character to Screen (putch): add a single char data to the graphics memory and display on screen
 - Put a string of chars to screen (puts): loop over putch calls using an array of chars as data
 
+*Global Descriptor Table / Gate Operations*
+- setup and install the gdt (gdt_install): initialize and install the global descriptor table
+- link gdt and set gate (gdt_set_gate): set up the flags and link the global descriptor table set
+
+*Interrupt Descriptor Table / Gate Operations*
+- setup and install the idt (idt_install): initialize and install the interrupt descriptor table
+- link idt and set gate (idt_set_gate): set up the flags and link the interrupt descriptor table set
