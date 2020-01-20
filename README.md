@@ -61,3 +61,8 @@ The Kernel should contail the ability to load driver modules and be loadable via
 *Timer Routines*
 - Install the system Timer (timer_install): install and initialize the system timer driver
 - System Timer Wait (timer_wait): wait for a number of ticks in the system timer
+
+*Keyboard Routines*
+- Install Keyboard (keyboard_install): Initialize the keyboard driver
+- Wait for Key (keyboard_wait): wait for a key press via the keyboard driver
+
