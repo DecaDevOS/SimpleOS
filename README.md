@@ -50,8 +50,14 @@ The Kernel should contail the ability to load driver modules and be loadable via
 - setup and install the idt (idt_install): initialize and install the interrupt descriptor table
 - link idt and set gate (idt_set_gate): set up the flags and link the interrupt descriptor table set
 
+*Interrupt Service Routines*
+- Install Interrupt Service Routines (isrs_install): setup and initialize the installation and linkage of isrs
+
 *Interrupt Handler IRQ init and management*
 - setup install and init interrupts (irq_install): setup initial irq table to a known state
 - Install irq handler (irq_install_handler): install the individual irq handler
 - Uninstall irq handler (irq_uninstall_handler): uninstall the individual irq handler
 
+*Timer Routines*
+- Install the system Timer (timer_install): install and initialize the system timer driver
+- System Timer Wait (timer_wait): wait for a number of ticks in the system timer
