@@ -25,6 +25,14 @@ The Kernel should contail the ability to load driver modules and be loadable via
 - Terminal (terminal like xterm with 256 colour support)
 - Dsh (shell to support pipes, redir, vars etc)
 
-#### API for initial Kernel Implementation (Feature Set hase 1)
-*TBD*
- 
+#### API for initial Kernel Implementation (Feature Set Base 1)
+*The API or Core feature set will start as follows:*
+
+*Kernel Core - Memory / Ports*
+- Memory Copy (memcpy): Copy data from src to dest
+- Memory Set (memset): set value starting at dest of count size
+- String Length (strlen): return the length of a character array
+- Read In port (inport): return the data from a port
+- Write Out port (outport): write data to a port
+
+
