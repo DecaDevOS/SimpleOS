@@ -136,7 +136,7 @@ extern void cls();
 
 *putch*
 
-Put a string to the screen
+Put a characterg to the screen
 
 ```C
 extern void putch(unsigned char c);
@@ -144,11 +144,15 @@ extern void putch(unsigned char c);
 
 *puts*
 
+Put a string to the screen
+
 ```C
 extern void puts(char *str);
 ```
 
 *kprintf*
+
+Print a formated string to the screen
 
 ```C
 extern void kprintf(const char *fmt, ...);
@@ -162,11 +166,15 @@ extern void kprintf(const char *fmt, ...);
 
 *gdt_install*
 
+Install the kernel's GDT's.
+
 ```C
 extern void gdt_install();
 ```
 
 *gdt_set_gate*
+
+Set the GDT Descriptor.
 
 ```C
 extern void gdt_set_gate(int num, unsigned long base, unsigned long limit, unsigned char access, unsigned char gran);
@@ -175,6 +183,23 @@ extern void gdt_set_gate(int num, unsigned long base, unsigned long limit, unsig
 #### *Interrupt Descriptor Table / Gate Operations*
 - setup and install the idt (idt_install): initialize and install the interrupt descriptor table
 - link idt and set gate (idt_set_gate): set up the flags and link the interrupt descriptor table set
+
+#### Breakdown of IDT Functions
+
+*idt_install*
+
+Install the kernel's IDT's.
+
+```C
+extern void idt_install();
+```
+*idt_set_gate*
+
+Set the IDT Descriptor.
+
+```C
+extern void idt_set_gate(unsigned char num, unsigned long base, unsigned short sel, unsigned char flags);
+```
 
 #### *Interrupt Service Routines*
 - Install Interrupt Service Routines (isrs_install): setup and initialize the installation and linkage of isrs
