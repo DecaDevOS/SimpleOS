@@ -12,6 +12,16 @@ Simple UNIX like operating system with kernel mode and usermode implementation b
     - PC Emulator to run the OS (QEMU)
     - Debug console (remote serial on qemu)
 
+### Utility
+This will be helpers etc. such as basic type aliases
+
+#### Types
+- uint8_t (unsigned 8 bit integer type)
+- uint16_t (unsigned 16 bit integer type)
+- uint32_t (unsigned 32 bit integer type)
+- uintptr_t (unsigned long integer pointer type)
+- size_t (long integer type)
+
 ### Kernel
 The Kernel should contail the ability to load driver modules and be loadable via the bootsector. there should be simple memory management functions along with a basic text mode driver. A kernel mode shell will also be useful for debugging and initialization toward stage 2 and 3 loading to move in to usermode.
 
