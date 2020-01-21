@@ -28,15 +28,43 @@ The Kernel should contail the ability to load driver modules and be loadable via
 - Terminal (terminal like xterm with 256 colour support)
 - Dsh (shell to support pipes, redir, vars etc)
 
-#### API for initial Kernel Implementation (Feature Set Base 1)
+### API for initial Kernel Implementation (Feature Set Base 1)
+
 *The API or Core feature set will start as follows:*
 
-*Kernel Core - Memory / Ports*
+#### *Kernel Core - Memory / Ports*
 - Memory Copy (memcpy): Copy data from src to dest
 - Memory Set (memset): set value starting at dest of count size
 - String Length (strlen): return the length of a character array
 - Read In port (inport): return the data from a port
 - Write Out port (outport): write data to a port
+
+##### Breakdown of core Functions
+
+*memcpy*
+```C
+extern void *memcpy(void * restrict dest, const void * restrict src, size_t count);
+```
+
+*memset*
+```C
+extern void *memset(void *dest, int val, size_t count);
+```
+
+*strlen*
+```C
+extern int strlen(const char *str);
+```
+
+*inport*
+```C
+extern unsigned char inport (unsigned short _port);
+```
+
+*outport*
+```C
+extern void outport (unsigned short _port, unsigned char _data);
+```
 
 *GFX Driver - Grapic Init / Text operations*
 - Initialize Graphics (init_gfx): set the graphic memory in to an initialized state
