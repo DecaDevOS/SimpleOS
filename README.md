@@ -42,26 +42,41 @@ The Kernel should contail the ability to load driver modules and be loadable via
 ##### Breakdown of core Functions
 
 *memcpy*
+
+ Copy from source to destination. Assumes that source and destination are not overlapping.
+
 ```C
 extern void *memcpy(void * restrict dest, const void * restrict src, size_t count);
 ```
 
 *memset*
+
+Set a count ammount of bytes to a value.
+
 ```C
 extern void *memset(void *dest, int val, size_t count);
 ```
 
 *strlen*
+
+Return the length of a given string.
+
 ```C
 extern int strlen(const char *str);
 ```
 
 *inport*
+
+Read data from an I/O port.
+
 ```C
 extern unsigned char inport (unsigned short _port);
 ```
 
 *outport*
+
+Write data to an I/O port.
+
 ```C
 extern void outport (unsigned short _port, unsigned char _data);
 ```
