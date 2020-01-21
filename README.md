@@ -276,11 +276,15 @@ extern void timer_wait(int ticks);
 
 *keyboard_install*
 
+Install the keyboard Handler.
+
 ```C
 extern void keyboard_install();
 ```
 
 *keyboard_wait*
+
+Wait a number of ticks before moving forward.
 
 ```C
 extern void keyboard_wait();
