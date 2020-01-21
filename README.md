@@ -272,3 +272,16 @@ extern void timer_wait(int ticks);
 - Install Keyboard (keyboard_install): Initialize the keyboard driver
 - Wait for Key (keyboard_wait): wait for a key press via the keyboard driver
 
+#### Breakdown of Keyboard Functions
+
+*keyboard_install*
+
+```C
+extern void keyboard_install();
+```
+
+*keyboard_wait*
+
+```C
+extern void keyboard_wait();
+```
