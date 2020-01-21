@@ -204,14 +204,69 @@ extern void idt_set_gate(unsigned char num, unsigned long base, unsigned short s
 #### *Interrupt Service Routines*
 - Install Interrupt Service Routines (isrs_install): setup and initialize the installation and linkage of isrs
 
+#### Breakdown of ISR Functions
+
+*isrs_install*
+
+Install Exception Handlers.
+
+```C
+extern void isrs_install();
+```
+
 #### *Interrupt Handler IRQ init and management*
 - setup install and init interrupts (irq_install): setup initial irq table to a known state
 - Install irq handler (irq_install_handler): install the individual irq handler
 - Uninstall irq handler (irq_uninstall_handler): uninstall the individual irq handler
 
+#### Breakdown of IRQ Functions
+
+*irq_install*
+
+Initialize IRQ Handlers
+
+```C
+extern void irq_install();
+```
+
+*irq_install_handler*
+
+Install Specified IRQ Handler
+
+```C
+extern void irq_install_handler(int irq, irq_handler_t);
+```
+
+*irq_uninstall_handler*
+
+Uninstall IRQ Handler @IRQ
+
+```C
+extern void irq_uninstall_handler(int irq);
+```
+
+
 #### *Timer Routines*
 - Install the system Timer (timer_install): install and initialize the system timer driver
 - System Timer Wait (timer_wait): wait for a number of ticks in the system timer
+
+#### Breakdown of Timer Functions
+
+*timer_install*
+
+Install Timer Handler.
+
+```C
+extern void timer_install();
+```
+
+*timer_wait*
+
+Wait for number of ticks to pass.
+
+```C
+extern void timer_wait(int ticks);
+```
 
 #### *Keyboard Routines*
 - Install Keyboard (keyboard_install): Initialize the keyboard driver
