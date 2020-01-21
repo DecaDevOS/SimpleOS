@@ -104,11 +104,15 @@ extern void outport (unsigned short _port, unsigned char _data);
 
 *init_gfx*
 
+Initialize the gfx driver.
+
 ```C
 extern void init_gfx();
 ```
 
 *settextcolour*
+
+Sets the foreground and background colour.
 
 ```C
 extern void settextcolour(unsigned char forecolour, unsigned char backcolour);
@@ -116,17 +120,23 @@ extern void settextcolour(unsigned char forecolour, unsigned char backcolour);
 
 *resettextcolour*
 
+Resets the text colour to white on black.
+
 ```C
 extern void resettextcolour();
 ```
 
 *cls*
 
+Clears the screen.
+
 ```C
 extern void cls();
 ```
 
 *putch*
+
+Put a string to the screen
 
 ```C
 extern void putch(unsigned char c);
@@ -147,6 +157,20 @@ extern void kprintf(const char *fmt, ...);
 #### *Global Descriptor Table / Gate Operations*
 - setup and install the gdt (gdt_install): initialize and install the global descriptor table
 - link gdt and set gate (gdt_set_gate): set up the flags and link the global descriptor table set
+
+#### Breakdown of GDT Functions
+
+*gdt_install*
+
+```C
+extern void gdt_install();
+```
+
+*gdt_set_gate*
+
+```C
+extern void gdt_set_gate(int num, unsigned long base, unsigned long limit, unsigned char access, unsigned char gran);
+```
 
 #### *Interrupt Descriptor Table / Gate Operations*
 - setup and install the idt (idt_install): initialize and install the interrupt descriptor table
