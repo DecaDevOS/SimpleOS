@@ -81,34 +81,80 @@ Write data to an I/O port.
 extern void outport (unsigned short _port, unsigned char _data);
 ```
 
-*GFX Driver - Grapic Init / Text operations*
+#### *GFX Driver - Grapic Init / Text operations*
 - Initialize Graphics (init_gfx): set the graphic memory in to an initialized state
 - Set the Colour of the text (settextcolour): change the second half of the grphics memory data to the colour of choice
+- Reset the Colour of the text (resettextcolour): change the second half of the grphics memory data to the default colour
 - Clear the screen (cls): manipulate the graphic memory to clear the buffers and move data out of scope
 - Put Character to Screen (putch): add a single char data to the graphics memory and display on screen
 - Put a string of chars to screen (puts): loop over putch calls using an array of chars as data
+- Format Print (kprintf): Print a formatted string in kernel mode
 
-*Global Descriptor Table / Gate Operations*
+##### Breakdown of GFX Functions
+
+*init_gfx*
+
+```C
+extern void init_gfx();
+```
+
+*settextcolour*
+
+```C
+extern void settextcolour(unsigned char forecolour, unsigned char backcolour);
+```
+
+*resettextcolour*
+
+```C
+extern void resettextcolour();
+```
+
+*cls*
+
+```C
+extern void cls();
+```
+
+*putch*
+
+```C
+extern void putch(unsigned char c);
+```
+
+*puts*
+
+```C
+extern void puts(char *str);
+```
+
+*kprintf*
+
+```C
+extern void kprintf(const char *fmt, ...);
+```
+
+#### *Global Descriptor Table / Gate Operations*
 - setup and install the gdt (gdt_install): initialize and install the global descriptor table
 - link gdt and set gate (gdt_set_gate): set up the flags and link the global descriptor table set
 
-*Interrupt Descriptor Table / Gate Operations*
+#### *Interrupt Descriptor Table / Gate Operations*
 - setup and install the idt (idt_install): initialize and install the interrupt descriptor table
 - link idt and set gate (idt_set_gate): set up the flags and link the interrupt descriptor table set
 
-*Interrupt Service Routines*
+#### *Interrupt Service Routines*
 - Install Interrupt Service Routines (isrs_install): setup and initialize the installation and linkage of isrs
 
-*Interrupt Handler IRQ init and management*
+#### *Interrupt Handler IRQ init and management*
 - setup install and init interrupts (irq_install): setup initial irq table to a known state
 - Install irq handler (irq_install_handler): install the individual irq handler
 - Uninstall irq handler (irq_uninstall_handler): uninstall the individual irq handler
 
-*Timer Routines*
+#### *Timer Routines*
 - Install the system Timer (timer_install): install and initialize the system timer driver
 - System Timer Wait (timer_wait): wait for a number of ticks in the system timer
 
-*Keyboard Routines*
+#### *Keyboard Routines*
 - Install Keyboard (keyboard_install): Initialize the keyboard driver
 - Wait for Key (keyboard_wait): wait for a key press via the keyboard driver
 
