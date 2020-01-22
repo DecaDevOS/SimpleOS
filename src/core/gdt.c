@@ -1,1 +1,1 @@
-/* Global Discriptor Table */
+/* Global Descriptor Table */
