@@ -39,4 +39,7 @@ struct registers {
 	unsigned int ss;
 };
 
+/* Register typedef */
+typedef void (*irq_handler_t)(struct registers *);
+
 
