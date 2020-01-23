@@ -7,5 +7,6 @@ extern void init_gfx();
 /* (cls): Clear the Screen */
 extern void cls();
 
-
+/* (settextcolour): Set the foreground and background colour */
+extern void settextcolour(unsigned char forecolour, unsigned char backcolour);
 
