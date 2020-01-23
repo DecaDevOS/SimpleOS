@@ -10,3 +10,7 @@ extern void gdt_set_gate(int num, unsigned long base, unsigned long limit, unsig
 /* (idt_install): Install the kernels IDTs */
 extern void idt_install();
 
+/* (idt_set_gate): Set the IDT Descriptor */
+extern void idt_set_gate(unsigned char num, unsigned long base, unsigned short sel, unsigned char flag);
+
+
