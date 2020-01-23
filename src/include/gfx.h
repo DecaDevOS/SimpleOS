@@ -15,3 +15,7 @@ extern void resettextcolour();
 
 /* (putch): Put a character to the screen */
 extern void putch(unsigned char c);
+
+/* (puts): Put a string to the screen */
+extern void puts(char *str);
+
