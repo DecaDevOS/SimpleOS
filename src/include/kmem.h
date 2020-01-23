@@ -13,4 +13,7 @@ extern int strlen(const char *str);
 /* (inport): Read data from an I/O port */
 extern unsigned char inport (unsigned short _port);
 
+/* (outport): Write data to an I/O port */
+extern void outport(unsigned short _port, unsigned char _data);
+
 
