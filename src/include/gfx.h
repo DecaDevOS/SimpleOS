@@ -19,3 +19,6 @@ extern void putch(unsigned char c);
 /* (puts): Put a string to the screen */
 extern void puts(char *str);
 
+/* (kprintf): Print formatted string to the screen */
+extern void kprintf(const char *fmt, ...);
+
