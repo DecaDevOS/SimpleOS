@@ -4,3 +4,8 @@
 /* (init_gfx): Initialize the gfx driver */
 extern void init_gfx();
 
+/* (cls): Clear the Screen */
+extern void cls();
+
+
+
