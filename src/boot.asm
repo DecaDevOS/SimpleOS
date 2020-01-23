@@ -14,7 +14,18 @@ start:
 	call	main	; call the main entrypoint of the c kernel
 	jmp	$	; infinite loop
 
+
+; Global Descriptor Table
+
+
+; Interrupt Descriptor Table
+
+
+; Interrupt Service Routines
+
+
 ; BSS Section
+
 
 SECTION .bss
 	resb 8192 ; 8K of memory reserved for the stack
