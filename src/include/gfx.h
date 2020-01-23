@@ -13,3 +13,5 @@ extern void settextcolour(unsigned char forecolour, unsigned char backcolour);
 /* (resettextcolour): Reset the text colour to white on black */
 extern void resettextcolour();
 
+/* (putch): Put a character to the screen */
+extern void putch(unsigned char c);
