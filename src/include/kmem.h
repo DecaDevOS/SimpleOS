@@ -7,4 +7,7 @@ extern void *memcpy(void * restrict dest, const void * restrict src, size_t coun
 /* (memset): Set count amount of bytes to value */
 extern void *memset(void *dest, int val, size_t count);
 
+/* (strlen): Return the length of a given string */
+extern int strlen(const char *str);
+
 
