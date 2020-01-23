@@ -10,4 +10,7 @@ extern void *memset(void *dest, int val, size_t count);
 /* (strlen): Return the length of a given string */
 extern int strlen(const char *str);
 
+/* (inport): Read data from an I/O port */
+extern unsigned char inport (unsigned short _port);
+
 
