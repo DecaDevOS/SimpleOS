@@ -47,3 +47,9 @@ typedef void (*irq_handler_t)(struct registers *);
 /* (isrs_install): Install interrupt service routines */
 extern void isrs_install();
 
+/* Interrupt Handlers */
+
+/* (irq_install): Initialize IRQ Handlers */
+extern void irq_install();
+
+
