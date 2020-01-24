@@ -52,4 +52,7 @@ extern void isrs_install();
 /* (irq_install): Initialize IRQ Handlers */
 extern void irq_install();
 
+/* (irq_install_handler): Install Specified IRQ Handler */
+extern void irq_install_handler(int irq, irq_handler_t);
+
 
