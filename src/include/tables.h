@@ -42,4 +42,8 @@ struct registers {
 /* Register typedef */
 typedef void (*irq_handler_t)(struct registers *);
 
+/* Install Exception Handlers */
+
+/* (isrs_install): Install interrupt service routines */
+extern void isrs_install();
 
