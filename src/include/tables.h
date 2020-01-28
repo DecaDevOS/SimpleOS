@@ -61,4 +61,7 @@ extern void irq_uninstall_handler(int irq);
 /* (timer_install): Install Timer Handler */
 extern void timer_install();
 
+/* (timer ticks variable): to hold ticks count */
+extern long timer_ticks;
+
 
