@@ -64,4 +64,7 @@ extern void timer_install();
 /* (timer ticks variable): to hold ticks count */
 extern long timer_ticks;
 
+/* (timer_wait): Wait for number of ticks to pass */
+extern void timer_wait(int ticks);
+
 
