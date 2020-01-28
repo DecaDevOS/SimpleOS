@@ -58,4 +58,7 @@ extern void irq_install_handler(int irq, irq_handler_t);
 /* (irq_uninstall_handler): Uninstall IRQ Handler @IRQ */
 extern void irq_uninstall_handler(int irq);
 
+/* (timer_install): Install Timer Handler */
+extern void timer_install();
+
 
