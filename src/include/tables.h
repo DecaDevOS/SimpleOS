@@ -67,4 +67,7 @@ extern long timer_ticks;
 /* (timer_wait): Wait for number of ticks to pass */
 extern void timer_wait(int ticks);
 
+/* (keyboard_install): Install the Keyboard Handler */
+extern void keyboard_install();
+
 
