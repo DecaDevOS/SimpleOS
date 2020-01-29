@@ -70,4 +70,6 @@ extern void timer_wait(int ticks);
 /* (keyboard_install): Install the Keyboard Handler */
 extern void keyboard_install();
 
+/* (keyboard_wait): Wait for a keypress interrupt to happen */
+extern void keyboard_wait();
 
