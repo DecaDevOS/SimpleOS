@@ -10,4 +10,7 @@
 /* Kernel Memory Include */
 #include "kmem.h"
 
+/* Graphics driver */
+#include "gfx.h"
+
 
