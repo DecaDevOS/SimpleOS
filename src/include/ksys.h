@@ -13,4 +13,7 @@
 /* Graphics driver */
 #include "gfx.h"
 
+/* Tables */
+#include "tables.h"
+
 
