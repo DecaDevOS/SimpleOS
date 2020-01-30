@@ -7,4 +7,7 @@
 /* Types */
 #include "types.h"
 
+/* Kernel Memory Include */
+#include "kmem.h"
+
 
