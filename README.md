@@ -55,10 +55,27 @@ The Kernel should contail the ability to load driver modules and be loadable via
 
  Copy from source to destination. Assumes that source and destination are not overlapping.
 
+*Decleration*
+
 ```C
 extern void *memcpy(void * restrict dest, const void * restrict src, size_t count);
 ```
+*Definition*
 
+```C
+void *memcpy(void * restrict dest, const void * restrict src, size_t count) {
+    
+    size_t idx;
+    unsigned char *d = dest;
+    const unsigned char *s = src;
+
+    for(idx = 0; idx < count; idx++) {
+        d[idx] = s[idx];
+    }
+
+    return dest;
+}
+```
 *memset*
 
 Set a count ammount of bytes to a value.
