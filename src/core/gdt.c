@@ -40,3 +40,21 @@ extern void gdt_set_gate(int num, unsigned long base, unsigned long limit, unsig
     gdt[num].access = access;
 }
 
+gdt_install() {
+    /* GDT pointer and limits */
+    gp.limit = (sizeof(struct gdt_entry) * 3) - 1;
+    gp.base = &gdt;
+
+    /* NULL out the initial Gate */
+    gdt_set_gate(0, 0, 0, 0, 0);
+
+    /* Code Segment */
+    gdt_set_gate(1, 0, 0xFFFFFFFF, 0x9A, 0xCF);
+
+    /* Data Segment */
+    gdt_set_gate(2, 0, 0xFFFFFFFF, 0x92, 0xCF);
+
+    /* flush the GDT and get in to it!! */
+    gdt_flush();
+}
+
