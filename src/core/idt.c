@@ -16,3 +16,5 @@ struct idt_ptr {
     unsigned int base;
 } __attribute__((packed));
 
+struct idt_entry idt[256];
+struct idt_ptr idtp;
