@@ -18,3 +18,5 @@ struct idt_ptr {
 
 struct idt_entry idt[256];
 struct idt_ptr idtp;
+
+extern void idt_load();
