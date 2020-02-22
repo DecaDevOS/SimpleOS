@@ -19,3 +19,5 @@ struct gdt_ptr {
 
 struct gdt_entry gdt[3];
 struct gdt_ptr   gp;
+
+extern void gdt_flush();
