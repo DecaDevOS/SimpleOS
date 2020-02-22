@@ -11,3 +11,8 @@ struct gdt_entry {
     unsigned char base_high;
 } __attribute__((packed));
 
+/* GDT Pointer */
+struct gdt_ptr {
+    unsigned short limit;
+    unsigned int base;
+} __attribute__((packed))
