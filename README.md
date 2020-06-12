@@ -1,5 +1,8 @@
 # Simple Operating System
 
+## Links
+- [Trello Board](https://trello.com/b/NQVbs6fa/decadevos-simple-os)
+
 ## Synopsis
 Simple UNIX like operating system with kernel mode and usermode implementation buit from scratch not using any current Linux / UNIX source code. bootable via current existing boot loaders such as GRUB using a multiboot header format and an elf binary format. facilitating user input via a terminal program and utilizing a set of gnu based utilities ported from the current gnu tool sets along with various other ports from linux / unix like operating systems
 
